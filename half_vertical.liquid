@@ -1,0 +1,30 @@
+{% assign cat = data[0] %}
+{% assign breed = cat.breeds[0] %}
+
+<div class="layout" style="display: flex; flex-direction: column; height: 100%; padding: 12px; gap: 10px;">
+  <div style="flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0;">
+    <img class="image-dither"
+         src="{{ cat.url }}"
+         style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+  </div>
+  {% if breed.name != blank %}
+    <div style="flex: 0; display: flex; flex-direction: column; gap: 4px;">
+      <span class="label label--large">{{ breed.name }}</span>
+      {% if breed.origin != blank %}
+        <span class="label">📍 {{ breed.origin }}</span>
+      {% endif %}
+      {% if breed.temperament != blank %}
+        <span class="label" style="opacity: 0.7;">{{ breed.temperament | truncate: 50 }}</span>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
+
+<div class="title_bar">
+  {% if breed.name != blank %}
+    <span class="title">{{ breed.name }}{% if breed.origin != blank %} · {{ breed.origin }}{% endif %}</span>
+  {% else %}
+    <span class="title">{{ trmnl.plugin_settings.instance_name }}</span>
+  {% endif %}
+  <span class="instance">{{ cat.id }}</span>
+</div>
