@@ -5,7 +5,7 @@ dark_mode: 'no'
 static_data: ''
 polling_verb: get
 polling_url: https://api.thecatapi.com/v1/images/search
-polling_headers: x-api-key=live_YywI1fmlFcrT44KJJuIBFVDtyTx11Gs9ntVvuyzP4Arv7jzFFPjkvG7o9Dsbc7x0
+polling_headers: x-api-key=live_xxxxxxxxxxxxPUTxYOURxAPIxKEYxHERExxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 id: 41611
 name: Cat API
 refresh_interval: 1440
