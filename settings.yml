@@ -4,8 +4,16 @@ no_screen_padding: 'no'
 dark_mode: 'no'
 static_data: ''
 polling_verb: get
+framework_version: 2.3.7
 polling_url: https://api.thecatapi.com/v1/images/search
-polling_headers: x-api-key=live_xxxxxxxxxxxxPUTxYOURxAPIxKEYxHERExxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+polling_headers: x-api-key={{API_key}}
+polling_body: ''
 id: 41611
+custom_fields:
+- keyname: API_key
+  field_type: string
+  name: AirGradient API Key
+  description: Find this in your AirGradient dashboard under Settings → Connectivity → API Access
+  placeholder: live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 name: Cat API
-refresh_interval: 1440
+refresh_interval: 240
